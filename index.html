@@ -1,186 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>$DILBERT Presale - Base Chain</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <style>
-    body {
-      background: linear-gradient(135deg, #2a0033, #0f001a);
-      font-family: 'Inter', system-ui, sans-serif;
-    }
-    .glow {
-      text-shadow: 0 0 25px rgb(168 85 247), 0 0 40px rgb(236 72 153);
-    }
-    .card {
-      background: rgba(30, 10, 45, 0.85);
-      backdrop-filter: blur(10px);
-    }
-  </style>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>$DILBERT Presale - Base Chain</title>
+ <script src="https://cdn.tailwindcss.com"></script>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+ <style>
+ body { background: linear-gradient(135deg, #2a0033, #0f001a); }
+ .glow { text-shadow: 0 0 25px rgb(168 85 247), 0 0 40px rgb(236 72 153); }
+ .card { background: rgba(30, 10, 45, 0.85); backdrop-filter: blur(10px); }
+ </style>
 </head>
 <body class="text-white min-h-screen pb-12">
-  <div class="max-w-4xl mx-auto py-10 px-6">
+ <div class="max-w-4xl mx-auto py-10 px-6">
 
-    <!-- Header -->
-    <div class="text-center mb-10">
-      <h1 class="text-7xl font-bold text-purple-500 glow">$DILBERT</h1>
-      <p class="text-3xl mt-3">Public Presale is <span class="text-green-400 font-bold">OPEN</span></p>
-      <p class="text-purple-300 text-xl">on Base Chain</p>
-      <p class="text-sm mt-2 text-gray-400">May 11 — May 20, 2026</p>
-    </div>
+ <!-- Header -->
+ <div class="text-center mb-6">
+ <h1 class="text-7xl font-bold text-purple-500 glow">DILBERT PRESALE</h1>
+ <p class="text-3xl mt-3">Public Presale is <span class="text-green-400 font-bold">OPEN</span></p>
+ <p class="text-purple-300 text-xl">on Base Chain • Manual Presale</p>
+ <p class="text-sm mt-2 text-gray-400">May 11 — May 20, 2026</p>
+ </div>
 
-    <!-- Character -->
-    <div class="flex justify-center mb-8">
-      <img src="https://i.ibb.co.com/0jZfY8K/dilbert-character.png" 
-           alt="DILBERT" class="w-64 rounded-3xl shadow-2xl border-4 border-purple-500">
-    </div>
+ <!-- Character -->
+ <div class="flex justify-center mb-8 relative">
+ <img src="dilbertimage.jpg" 
+ alt="DILBERT" 
+ class="w-72 rounded-3xl shadow-2xl border-4 border-purple-500">
+ </div>
 
-    <!-- Countdown -->
-    <div class="card border border-purple-500 rounded-3xl p-8 mb-8 text-center">
-      <p class="text-purple-300 mb-3 text-lg">Presale Ends In</p>
-      <div id="countdown" class="grid grid-cols-4 gap-4 text-center max-w-md mx-auto"></div>
-      <p class="text-xs text-gray-400 mt-4">TGE (Token Generation Event) : End of May 2026</p>
-    </div>
+ <!-- Important Notice -->
+ <div class="bg-yellow-600/20 border border-yellow-500 rounded-3xl p-6 mb-8 text-center">
+ <p class="font-bold text-yellow-400">⚠️ MANUAL PRESALE</p>
+ <p class="text-sm mt-2">Send USDT → Submit Proof via Google Form</p>
+ </div>
 
-    <!-- Presale Info -->
-    <div class="card border border-purple-500 rounded-3xl p-10 text-center mb-8">
-      <h2 class="text-4xl font-bold mb-4">Presale Price</h2>
-      <p class="text-6xl font-bold text-purple-400">$0.0010</p>
-      <p class="text-xl text-gray-400">per $DILBERT</p>
+ <!-- Wallet Address -->
+ <div class="card border border-purple-500 rounded-3xl p-8 mb-8 text-center">
+ <h2 class="text-2xl font-bold mb-4">Send USDT (Base) to this Address</h2>
+ <div class="bg-black/70 p-5 rounded-2xl font-mono text-lg break-all text-purple-300">
+ 0x0cc861b62cc3687a8e8cb53dc206f50a5b94c0a6
+ </div>
+ <button onclick="copyAddress()" 
+ class="mt-4 bg-purple-600 hover:bg-purple-700 px-6 py-3 rounded-xl text-sm font-medium">
+ 📋 Copy Address
+ </button>
+ </div>
 
-      <div class="mt-4 text-lg font-semibold text-green-400">
-        1 USDT = 1,000 $DILBERT
-      </div>
+ <!-- Submit Proof -->
+ <div class="card border border-purple-500 rounded-3xl p-8 mb-8 text-center">
+ <h2 class="text-2xl font-bold mb-4">Submit Your Transaction Proof</h2>
+ <a href="https://docs.google.com/forms/d/e/1FAIpQLSfWfU7aDnmzP33BmEd9K86GpmWatVMhoN0r9jkBTW2nUzkWQg/viewform" 
+ target="_blank"
+ class="inline-block bg-green-600 hover:bg-green-700 px-10 py-5 rounded-2xl text-xl font-bold transition">
+ 📝 Submit Tx Hash Here
+ </a>
+ <p class="text-xs text-gray-400 mt-3">Submit after sending USDT (include Tx Hash + Your Wallet)</p>
+ </div>
 
-      <div class="mt-6 inline-flex items-center gap-2 bg-green-900/50 text-green-400 px-5 py-2 rounded-2xl text-sm font-medium">
-        <i class="fas fa-check-circle"></i>
-        Pay with USDT (Base)
-      </div>
+ <!-- Presale Info -->
+ <div class="card border border-purple-500 rounded-3xl p-10 text-center mb-8">
+ <h2 class="text-4xl font-bold mb-4">Presale Price</h2>
+ <p class="text-6xl font-bold text-purple-400">$0.0010</p>
+ <p class="text-xl text-gray-400">per $DILBERT</p>
+ <div class="mt-4 text-lg font-semibold text-green-400">
+ 1 USDT = 1,000 $DILBERT
+ </div>
+ <p class="text-xs text-gray-400 mt-8">Minimum Buy: $10</p>
 
-      <!-- Caps -->
-      <div class="grid grid-cols-2 gap-6 mt-8">
-        <div class="bg-black/50 p-6 rounded-2xl">
-          <p class="text-sm text-green-400">Soft Cap</p>
-          <p class="text-3xl font-bold">$3,500</p>
-        </div>
-        <div class="bg-black/50 p-6 rounded-2xl">
-          <p class="text-sm">Hard Cap</p>
-          <p class="text-3xl font-bold">$7,000</p>
-        </div>
-      </div>
+ <button onclick="showInstruction()" 
+ class="mt-10 w-full bg-gradient-to-r from-purple-600 via-pink-600 to-purple-600 py-7 rounded-2xl text-2xl font-bold">
+ 🚀 SEND USDT NOW
+ </button>
+ </div>
 
-      <!-- Progress Bar -->
-      <div class="mt-10">
-        <div class="flex justify-between text-sm mb-2">
-          <span>Raised: <span id="raised" class="font-bold">$1,890</span></span>
-          <span>Hard Cap: <span class="font-bold">$7,000</span></span>
-        </div>
-        <div class="w-full bg-gray-800 rounded-full h-5 overflow-hidden">
-          <div id="progress" class="bg-gradient-to-r from-purple-500 to-pink-500 h-5 rounded-full transition-all duration-500" style="width: 27%"></div>
-        </div>
-        <p class="text-xs text-gray-400 mt-1">27% of Hard Cap</p>
-      </div>
+ <!-- How to Buy -->
+ <div class="card border border-purple-500 rounded-3xl p-8 mb-8">
+ <h2 class="text -3xl font-bold text-center mb-6">How to Participate</h2>
+ <div class="space-y-6 text-left">
+ <div class="flex gap-5">
+ <div class="w-10 h-10 bg-purple-600 rounded-2xl flex items-center justify-center flex-shrink-0">1</div>
+ <div>
+ <p class="font-bold">Send USDT on Base Chain</p>
+ <p class="text-gray-400">Minimum $10 to the address above</p>
+ </div>
+ </div>
+ <div class="flex gap-5">
+ <div class="w-10 h-10 bg-purple-600 rounded-2xl flex items-center justify-center flex-shrink-0">2</div>
+ <div>
+ <p class="font-bold">Submit Proof</p>
+ <p class="text-gray-400">Fill the Google Form with Tx Hash & Wallet Address</p>
+ </div>
+ </div>
+ </div>
+ </div>
 
-      <button onclick="alert('Wallet Connect will be available after contract is ready!\n\nMinimum Buy: $10 USDT')" 
-              class="mt-10 w-full bg-gradient-to-r from-purple-600 via-pink-600 to-purple-600 hover:brightness-110 py-7 rounded-2xl text-2xl font-bold transition-all duration-300 shadow-lg shadow-purple-500/50">
-        🚀 BUY $DILBERT WITH USDT
-      </button>
+ <!-- Social Media -->
+ <div class="card border border-purple-500 rounded-3xl p-8 mb-8">
+ <h2 class="text-3xl font-bold text-center mb-6">Join Community</h2>
+ <div class="flex justify-center gap-8 text-5xl">
+ <a href="https://x.com/dilbertonbase" target="_blank" class="hover:text-purple-400 transition">
+ <i class="fab fa-x-twitter"></i>
+ </a>
+ <a href="https://warpcast.com/dilbert" target="_blank" class="hover:text-purple-400 transition">
+ <i class="fa-solid fa-comment-dots"></i>
+ </a>
+ <a href="#" target="_blank" class="hover:text-purple-400 transition opacity-60">
+ <i class="fab fa-discord"></i>
+ </a>
+ <a href="#" target="_blank" class="hover:text-purple-400 transition opacity-60">
+ <i class="fab fa-telegram"></i>
+ </a>
+ </div>
+ <p class="text-center text-xs text-gray-400 mt-4">
+ Discord & Telegram : Coming Soon
+ </p>
+ </div>
 
-      <p class="text-xs text-gray-400 mt-4">Minimum Buy: $10</p>
-    </div>
+ <div class="text-center text-gray-500 text-sm mt-12">
+ Presale Period: May 11 — May 20, 2026<br>
+ Soft Cap $3,500 | Hard Cap $7,000 • Min Buy $10<br>
+ TGE: End of May 2026<br>
+ <span class="text-red-400 font-medium">Always Double Check the Address Before Sending!</span>
+ </div>
 
-    <!-- Tokenomics -->
-    <div class="card border border-purple-500 rounded-3xl p-8 mb-8">
-      <h2 class="text-3xl font-bold text-center mb-8 text-purple-400">Tokenomics</h2>
-      <div class="space-y-4 text-lg">
-        <div class="flex justify-between"><span>Community & Airdrop</span><span class="font-bold">50%</span></div>
-        <div class="flex justify-between"><span>Liquidity</span><span class="font-bold">20% (Locked)</span></div>
-        <div class="flex justify-between"><span>Team & Advisor</span><span class="font-bold">10% (Vested)</span></div>
-        <div class="flex justify-between"><span>Marketing & KOL</span><span class="font-bold">8%</span></div>
-        <div class="flex justify-between bg-purple-900/40 p-3 rounded-2xl border border-purple-400"><span class="font-bold">Presale</span><span class="font-bold text-purple-400">7%</span></div>
-        <div class="flex justify-between"><span>Ecosystem</span><span class="font-bold">5%</span></div>
-      </div>
-    </div>
+ </div>
 
-    <!-- How to Buy -->
-    <div class="card border border-purple-500 rounded-3xl p-8 mb-8">
-      <h2 class="text-3xl font-bold text-center mb-6">How to Buy</h2>
-      <div class="space-y-6">
-        <div class="flex gap-5 items-start">
-          <div class="w-10 h-10 bg-purple-600 rounded-2xl flex items-center justify-center flex-shrink-0">1</div>
-          <div>
-            <p class="font-bold">Prepare Your Wallet</p>
-            <p class="text-gray-400">MetaMask / Rabby Wallet (Switch to Base Network)</p>
-          </div>
-        </div>
-        <div class="flex gap-5 items-start">
-          <div class="w-10 h-10 bg-purple-600 rounded-2xl flex items-center justify-center flex-shrink-0">2</div>
-          <div>
-            <p class="font-bold">Get USDT on Base</p>
-            <p class="text-gray-400">Bridge or buy USDT directly on Base Chain</p>
-          </div>
-        </div>
-        <div class="flex gap-5 items-start">
-          <div class="w-10 h-10 bg-purple-600 rounded-2xl flex items-center justify-center flex-shrink-0">3</div>
-          <div>
-            <p class="font-bold">Click "Buy $DILBERT with USDT"</p>
-            <p class="text-gray-400">Minimum purchase $10 • Approve & confirm</p>
-          </div>
-        </div>
-      </div>
-    </div>
+ <script>
+ const walletAddress = "0x0cc861b62cc3687a8e8cb53dc206f50a5b94c0a6";
 
-    <!-- Social Media -->
-    <div class="text-center">
-      <p class="text-purple-300 mb-4">Join the Community</p>
-      <div class="flex justify-center gap-6 text-4xl">
-        <a href="#" class="hover:text-purple-400 transition"><i class="fab fa-x-twitter"></i></a>
-        <a href="#" class="hover:text-purple-400 transition"><i class="fab fa-telegram"></i></a>
-        <a href="#" class="hover:text-purple-400 transition"><i class="fab fa-discord"></i></a>
-        <a href="https://warpcast.com/dilbert" class="hover:text-purple-400 transition"><i class="fa-solid fa-comment-dots"></i></a>
-      </div>
-    </div>
+ function copyAddress() {
+ navigator.clipboard.writeText(walletAddress);
+ alert("✅ Wallet Address Copied!");
+ }
 
-    <div class="text-center text-gray-500 text-sm mt-12">
-      Presale Period: May 11 — May 20, 2026<br>
-      Soft Cap $3,500 | Hard Cap $7,000 • Min Buy $10<br>
-      Payment: USDT on Base Chain<br>
-      TGE: End of May 2026<br>
-      Disclaimer: Crypto investment carries risk. DYOR.
-    </div>
+ function showInstruction() {
+ alert(`📌 SEND USDT TO:\n\n${walletAddress}\n\nMinimum: $10 USDT\n\nAfter sending, please submit the proof via Google Form.`);
+ }
 
-  </div>
+ // Countdown
+ const countdownDate = new Date("2026-05-20T23:59:59").getTime();
+ function updateCountdown() {
+ const now = new Date().getTime();
+ const distance = countdownDate - now;
+ const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+ const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+ const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+ const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  <!-- Countdown Script -->
-  <script>
-    // Presale ends on May 20, 2026
-    const countdownDate = new Date("2026-05-20T23:59:59").getTime();
-
-    function updateCountdown() {
-      const now = new Date().getTime();
-      const distance = countdownDate - now;
-
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      document.getElementById("countdown").innerHTML = `
-        <div><span class="text-4xl font-bold text-purple-400">${days}</span><br><span class="text-xs">DAYS</span></div>
-        <div><span class="text-4xl font-bold text-purple-400">${hours}</span><br><span class="text-xs">HOURS</span></div>
-        <div><span class="text-4xl font-bold text-purple-400">${minutes}</span><br><span class="text-xs">MINUTES</span></div>
-        <div><span class="text-4xl font-bold text-purple-400">${seconds}</span><br><span class="text-xs">SECONDS</span></div>
-      `;
-
-      if (distance < 0) {
-        document.getElementById("countdown").innerHTML = `<div class="col-span-4 text-2xl text-red-400">Presale has ended!</div>`;
-      }
-    }
-
-    setInterval(updateCountdown, 1000);
-    updateCountdown();
-  </script>
+ document.getElementById("countdown").innerHTML = `
+ <div><span class="text-4xl font-bold text-purple-400">${days}</span><br><span class="text-xs">DAYS</span></div>
+ <div><span class="text-4xl font-bold text-purple-400">${hours}</span><br><span class="text-xs">HOURS</span></div>
+ <div><span class="text-4xl font-bold text-purple-400">${minutes}</span><br><span class="text-xs">MINUTES</span></div>
+ <div><span class="text-4xl font-bold text-purple-400">${seconds}</span><br><span class="text-xs">SECONDS</span></div>
+ `;
+ }
+ setInterval(updateCountdown, 1000);
+ updateCountdown();
+ </script>
 </body>
 </html>
